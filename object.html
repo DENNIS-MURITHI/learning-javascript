@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Objects in a nutshell Today</h1>
+
+    <p id="obj"></p>
+    <p id="obj1"></p>
+    <p id="obj2"></p>
+     
+    <script>
+        //  Method 1
+
+        const studentOne = {
+
+            name: "Dennis Murithi",
+            age : 30,
+            origin: "Kenya"
+        }
+    </script>
+
+    <script>
+    //   method 2 of creating an object.
+        const student = new Object();
+        student.name= "Kelvin Mutuma";
+        student.age = 25;
+        student.origin = "Uganda";
+        let message= `Hello ! My name is ${student.name} and I am  ${student.age} years old. I come from Eastern part of ${student.origin}`;
+        document.getElementById("obj1").innerText = message;
+
+    //method 3 of creating an Object.
+    </script>
+
+    <script>
+    function stud(name,age, origin){
+        this.name = name;
+        this.age = age;
+        this.origin = origin;
+    }
+    let student = stud("Dennis", 28,"South Africa");
+    document.getElementById("obj2").innerHTML= `Hello ! My name is ${student.name} and I am  ${student.age} years old. I come from Eastern part of ${student.origin}`;
+
+    </script>
+</body>
+</html>

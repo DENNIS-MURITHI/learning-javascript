@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my webpage</h1>
+    <h2>
+        <p id="display"></p>
+    </h2><br>
+    <button id="clickMe" >Click me</button> 
+</body>
+
+<script>
+
+    let person = {
+        name:'Dennis',
+        age:25
+    }
+   document.getElementById("display").innerHTML = `Hi , ${person.name}`;
+
+   function sayHi(){
+    alert(`hello ${person.name}`)
+   }
+   let msg = sayHi 
+   document.getElementById('clickMe').onclick = msg
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{text-align: center;
+        background-color: green;}
+        input{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+            padding: 2px;
+            width: 60%;
+        
+        }
+        #submit{
+            width: fit-content;
+            background-color: orange;
+            cursor: pointer;
+        }
+    </style>
+<h1>Welcome to form and its validation</h1>
+<form action="message.html" name="myForm" onsubmit="return(validate())" >
+    <input name="Email" placeholder="Email" type="text" required><br><br>
+    <input name="Password" placeholder="Password" type="password" required><br><br>
+    <input type="submit" id="submit">
+</form>
+
+<script>
+function validate(){
+    if(document.myForm.Email.value ==""){
+        alert("Enter your email address");
+        document.myForm.Email.focus;
+        return false;
+    }
+    else if(document.myForm.Password.value ==""){
+        alert("Enter your password address");
+        document.myForm.Password.focus;
+        return false;
+    }else{
+        return false;
+    }
+}
+</script>
+</body>
+</html>
